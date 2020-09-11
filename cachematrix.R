@@ -1,7 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
+##I used to this program the functions that the assignment give us, changing some variables and some codes.
 
-## Write a short comment describing this function
+## Creates a matrix object that can cache its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -10,16 +9,16 @@ makeCacheMatrix <- function(x = matrix()) {
     m<<- NULL
   }
   get1 <- function() x
-  set1 <- function(mean) m <<- inverse
-  get1 <- function() m
+  set1 <- function(mean) m <<- inverse ##Asigns value of inverse in parent m
+  get1 <- function() m                 ##Get1 gets the value of m when called
   list(set = set, get = get,
        set1 = set1,
        get1 = get1)
 }
 
 
-## Write a short comment describing this function
-
+## Compute inverse of the 'matrix' returned by makeCache Matrix
+## Again i used the code that the assigment give us changing some variables acording what i'm doing...
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
   m <- x$get1()
